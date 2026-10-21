@@ -1,0 +1,88 @@
+:root {
+  --bg: #f6f8f8;
+  --card: #ffffff;
+  --text: #1d2626;
+  --muted: #5b6b6b;
+  --line: #dde5e4;
+  --accent: #186266;
+  --todo-bg: #fff2b3;
+  --todo-text: #5c4500;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101515;
+    --card: #182020;
+    --text: #e6eeee;
+    --muted: #9aaeae;
+    --line: #2a3535;
+    --accent: #6cc7c4;
+    --todo-bg: #574500;
+    --todo-text: #ffe9a3;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header.site {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+header.site a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+h1 { font-size: 1.6rem; line-height: 1.4; margin: 8px 0 4px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 1rem; margin: 20px 0 4px; }
+p, li { font-size: 1rem; }
+.lead { color: var(--muted); margin-top: 0; }
+.date { color: var(--muted); font-size: 0.9rem; }
+
+a { color: var(--accent); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px 18px;
+  margin: 16px 0;
+}
+
+dl.table { margin: 0; }
+dl.table div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+dl.table div:last-child { border-bottom: none; }
+dl.table dt { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+dl.table dd { margin: 2px 0 0; }
+
+nav.pages { margin-top: 40px; font-size: 0.95rem; }
+nav.pages ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+footer { color: var(--muted); font-size: 0.85rem; margin-top: 32px; }
+
+/* Items the owner still has to fill in before publishing. */
+.todo {
+  background: var(--todo-bg);
+  color: var(--todo-text);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: 600;
+}
